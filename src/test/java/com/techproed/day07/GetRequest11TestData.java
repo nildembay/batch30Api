@@ -1,59 +1,30 @@
 package com.techproed.day07;
 
 import com.techproed.testBase.JsonPlaceHolderTestBase;
+import com.techproed.testData.JsonPlaceHolderTestData;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-public class GetRequest11 extends JsonPlaceHolderTestBase {
-
-    /*
-https://jsonplaceholder.typicode.com/todos/2 url ‘ine istek gönderildiğinde,
- Dönen response un
- Status kodunun 200, dönen body de,
- "completed": değerinin false
-"title”: değerinin “quis ut nam facilis et officia qui”
-"userId" sinin 1 ve
-header değerlerinden
- "Via" değerinin “1.1 vegur” ve
- "Server" değerinin “cloudflare” olduğunu test edin…
- */
-
-    /*
-
-    url oluştur
-    --expected data
-    request gönder
-   -- actual data
-    assertion
-
-     */
+public class GetRequest11TestData extends JsonPlaceHolderTestBase {
 
     @Test
     public void test(){
 
-      spec01.pathParams("parametre1","todos",
-              "parametre2",2);
+        spec01.pathParams("parametre1","todos",
+                "parametre2",2);
 
-
-        HashMap<String,Object> expectedData=new HashMap<String, Object>();
-
-        expectedData.put("statusCode",200);
-        expectedData.put("via","1.1 vegur");
-        expectedData.put("Server","cloudflare");
-        expectedData.put("userId",1);
-        expectedData.put("title","quis ut nam facilis et officia qui");
-        expectedData.put("completed",false);
-
+        JsonPlaceHolderTestData expectedObje=new JsonPlaceHolderTestData();
+        HashMap<String,Object> expectedData= (HashMap<String, Object>) expectedObje.setUpTestData();
         System.out.println(expectedData);
-        System.out.println("----------------------------");
+
+
 
         Response response=given().
                 accept("application/json").
@@ -88,16 +59,10 @@ header değerlerinden
         //   --pojo class ile birlite map
 
 
-
-
-
-
-
-
-
-
-
     }
+
+
+
 
 
 }
