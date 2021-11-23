@@ -49,7 +49,7 @@ public class HerokuappTestData {
             expectedRequest.put("lastname","bitti");
             expectedRequest.put("totalprice",123);
             expectedRequest.put("depositpaid",false);
-            expectedRequest.put("bookindates",bookingdates);
+            expectedRequest.put("bookingdates",bookingdates);
             return expectedRequest;
 
 
