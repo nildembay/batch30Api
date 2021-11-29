@@ -1,5 +1,6 @@
 package com.techproed.day12;
 
+import com.google.gson.Gson;
 import com.techproed.pojos.TodosPojo;
 import com.techproed.testBase.JsonPlaceHolderTestBase;
 import io.restassured.http.ContentType;
@@ -55,11 +56,6 @@ public class PostRequestWithPojo01 extends JsonPlaceHolderTestBase {
         Assert.assertEquals(requestExpected.getId(),actualData.getId());
         Assert.assertEquals(requestExpected.getTitle(),actualData.getTitle());
         Assert.assertEquals(requestExpected.isCompleted(),actualData.isCompleted());
-
-
-
-
-
 
 
     }
