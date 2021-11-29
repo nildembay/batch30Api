@@ -3,10 +3,10 @@ package com.techproed.pojos;
 public class Data {
 
     private Integer id;
-    private String employeeName;
-    private Integer employeeSalary;
-    private Integer employeeAge;
-    private String profileImage;
+    private String employee_name;
+    private Integer employee_salary;
+    private Integer employee_age;
+    private String profile_image;
 
     /**
      * No args constructor for use in serialization
@@ -17,19 +17,19 @@ public class Data {
 
     /**
      *
-     * @param employeeName
-     * @param employeeAge
+     * @param employee_name
+     * @param employee_age
      * @param id
-     * @param profileImage
-     * @param employeeSalary
+     * @param profile_image
+     * @param employee_salary
      */
-    public Data(Integer id, String employeeName, Integer employeeSalary, Integer employeeAge, String profileImage) {
+    public Data(Integer id, String employee_name, Integer employee_salary, Integer employee_age, String profile_image) {
         super();
         this.id = id;
-        this.employeeName = employeeName;
-        this.employeeSalary = employeeSalary;
-        this.employeeAge = employeeAge;
-        this.profileImage = profileImage;
+        this.employee_name = employee_name;
+        this.employee_salary = employee_salary;
+        this.employee_age = employee_age;
+        this.profile_image = profile_image;
     }
 
     public Integer getId() {
@@ -40,36 +40,36 @@ public class Data {
         this.id = id;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getemployee_name() {
+        return employee_name;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public void setemployee_name(String employee_name) {
+        this.employee_name = employee_name;
     }
 
-    public Integer getEmployeeSalary() {
-        return employeeSalary;
+    public Integer getemployee_salary() {
+        return employee_salary;
     }
 
-    public void setEmployeeSalary(Integer employeeSalary) {
-        this.employeeSalary = employeeSalary;
+    public void setemployee_salary(Integer employee_salary) {
+        this.employee_salary = employee_salary;
     }
 
-    public Integer getEmployeeAge() {
-        return employeeAge;
+    public Integer getemployee_age() {
+        return employee_age;
     }
 
-    public void setEmployeeAge(Integer employeeAge) {
-        this.employeeAge = employeeAge;
+    public void setemployee_age(Integer employee_age) {
+        this.employee_age = employee_age;
     }
 
-    public String getProfileImage() {
-        return profileImage;
+    public String getprofile_image() {
+        return profile_image;
     }
 
-    public void setProfileImage(String profileImage) {
-        this.profileImage = profileImage;
+    public void setprofile_image(String profile_image) {
+        this.profile_image = profile_image;
     }
 
     @Override
@@ -80,21 +80,21 @@ public class Data {
         sb.append('=');
         sb.append(((this.id == null)?"<null>":this.id));
         sb.append(',');
-        sb.append("employeeName");
+        sb.append("employee_name");
         sb.append('=');
-        sb.append(((this.employeeName == null)?"<null>":this.employeeName));
+        sb.append(((this.employee_name == null)?"<null>":this.employee_name));
         sb.append(',');
-        sb.append("employeeSalary");
+        sb.append("employee_salary");
         sb.append('=');
-        sb.append(((this.employeeSalary == null)?"<null>":this.employeeSalary));
+        sb.append(((this.employee_salary == null)?"<null>":this.employee_salary));
         sb.append(',');
-        sb.append("employeeAge");
+        sb.append("employee_age");
         sb.append('=');
-        sb.append(((this.employeeAge == null)?"<null>":this.employeeAge));
+        sb.append(((this.employee_age == null)?"<null>":this.employee_age));
         sb.append(',');
-        sb.append("profileImage");
+        sb.append("profile_image");
         sb.append('=');
-        sb.append(((this.profileImage == null)?"<null>":this.profileImage));
+        sb.append(((this.profile_image == null)?"<null>":this.profile_image));
         sb.append(',');
         if (sb.charAt((sb.length()- 1)) == ',') {
             sb.setCharAt((sb.length()- 1), ']');
